@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGL Component Example</title>
+    <script src="filter.js"></script>
+    <script src="Main.js"></script>
+  </head>
+  <body>
+    <h1>Array Filter Example</h1>
+    <p>Open the console to see the filtered array.</p>
+    <div id="main">
+      <input type="number" id="threshold" min="1" />
+      <button id="filter">Filter</button>
+    </div>
+    <div id="dataLengthContainer">
+      Data Size: <span id="dataLength">0</span>
+    </div>
+    <div style="width: 80%; margin: 0 auto">
+      <!-- Canvas element for the chart -->
+      <canvas id="plotCanvas" height="400px" width="500px"></canvas>
+      <link rel="stylesheet" href="./index.css" />
+    </div>
+  </body>
+</html>
