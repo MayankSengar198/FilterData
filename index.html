@@ -5,21 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebGL Component Example</title>
     <script src="filter.js"></script>
-    <script src="Main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+    <!-- Load Pixi.js -->
+    <script type="module" src="Main.js"></script>
   </head>
   <body>
     <h1>Array Filter Example</h1>
     <p>Open the console to see the filtered array.</p>
-    <div id="main">
-      <input type="number" id="threshold" min="1" />
-      <button id="filter">Filter</button>
-    </div>
-    <div id="dataLengthContainer">
-      Data Size: <span id="dataLength">0</span>
+    <div class="container">
+      <div class="input-group">
+        <label for="threshold">Threshold:</label>
+        <input
+          type="number"
+          id="threshold"
+          min="1"
+          placeholder="Enter threshold"
+        />
+        <button id="filter">Filter</button>
+      </div>
+
+      <div class="input-group">
+        <label for="dataSize">Data Size:</label>
+        <input
+          type="number"
+          id="dataSize"
+          min="1"
+          placeholder="Set data size"
+        />
+        <button id="applySize">Apply</button>
+      </div>
+
+      <div id="dataLengthContainer">
+        Current Data Size: <span id="dataLength">0</span>
+      </div>
     </div>
     <div style="width: 80%; margin: 0 auto">
       <!-- Canvas element for the chart -->
-      <canvas id="plotCanvas" height="400px" width="500px"></canvas>
+      <canvas id="plotCanvas"></canvas>
       <link rel="stylesheet" href="./index.css" />
     </div>
   </body>
